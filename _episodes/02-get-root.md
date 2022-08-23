@@ -34,37 +34,7 @@ You can find detailed information about ROOT on Conda in [this blog post](https:
 
 Most notably, the CERN service [LXPLUS](http://information-technology.web.cern.ch/services/lxplus-service) has CVMFS always installed and enables rapid access to software and computing resources.
 
-### CMSSW
 
-The following commands let you find out quickly which ROOT version comes with CMSSW.
-
-```bash
-# Source setup tools
-source /cvmfs/cms.cern.ch/cmsset_default.sh
-
-# Show CMSSW versions
-scram list
-
-# Setup CMSSW environment (using CMSSW_11_1_3 here)
-cmsrel CMSSW_11_1_3
-cd CMSSW_11_1_3/
-
-# Show information about ROOT
-scram tool list | grep root
-
-# Source this CMSSW release
-cmsenv
-```
-
-### LCG
-
-Another option to get ROOT via CVMFS are the LCG releases. All information about the releases and contained packages can be found at [http://lcginfo.cern.ch](http://lcginfo.cern.ch). Most releases are available as a Python 2 and Python 3 version, for example [`98`](http://lcginfo.cern.ch/release/98/) and [`98python3`](http://lcginfo.cern.ch/release/98python3/). There are also development releases every night, which contain the latest ROOT release in [`dev4`](http://lcginfo.cern.ch/release/dev4/) and the very latest developments from ROOT master in [`dev3`](http://lcginfo.cern.ch/release/dev3/).
-
-The following example shows you how to source LCG 98 based on Python 3 on a CentOS 7 machine such as those on LXPLUS. Note the platform and compiler dependent information in the path, which have to be adjusted based on your system. The available combinations are shown on the website.
-
-```bash
-source /cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc10-opt/setup.sh
-```
 
 ## Docker
 
