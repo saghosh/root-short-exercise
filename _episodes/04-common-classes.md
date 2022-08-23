@@ -19,12 +19,11 @@ A unique feature of ROOT is the possibility to use C++ scripts, also called "ROO
 
 ```cpp
 void myScript() {
-    auto file = TFile::Open("https://root.cern/files/tmva_class_example.root");
-    for (auto key : *file->GetListOfKeys()) {
-        const auto name = key->GetName();
-        const auto entries = file->Get<TTree>(name)->GetEntries();
-        std::cout << name << " : " << entries << std::endl;
-    }
+    auto file = TFile::Open("tmva_class_example.root");
+
+    auto newtree = (TTree*)file->Get("TreeS");
+    auto entries = newtree->GetEntries();
+    std::cout << "Entried in TreeS : " << entries << std::endl;
 }
 ```
 
@@ -35,9 +34,74 @@ $ root myScript.C
 
 root [0]
 Processing myScript.C...
-TreeS : 6000
-TreeB : 6000
+Entried in TreeS  : 6000
 ```
+
+There are other ways to run scripts, try them.
+
+### Plotting from file ith script
+```cpp
+void myScript_plot() {
+
+    TH1F *h_var1 = new TH1F("h_var1", "var1", 100, -4.0, 4.0);
+    TFile *file = new TFile("/Users/sar/Desktop/TestROOT/tmva_class_example.root");
+    TTree *tree1 = (TTree*)file->Get("TreeS");
+
+    float var1;
+
+    tree1->SetBranchAddress("var1", &var1);
+
+    int nentries = (int)tree1->GetEntries();
+
+    for(int i=0; i < nentries; i++){
+
+        tree1->GetEntry(i);
+        h_var1->Fill(var1);
+
+    }
+
+    TCanvas *c1 = new TCanvas();
+    h_var1->Draw();
+}
+
+```
+
+
+### Examples of creating histogam:
+
+```cpp
+void scriptHist(){
+    auto cnt_r_h=new TH1F("count_rate",
+                "Count Rate;N_{Counts};# occurencies",
+                100, // Number of Bins
+                -0.5, // Lower X Boundary
+                15.5); // Upper X Boundary
+
+    auto mean_count=3.6f;
+    TRandom3 rndgen;
+    // simulate the measurements
+    for (int imeas=0;imeas<400;imeas++)
+        cnt_r_h->Fill(rndgen.Poisson(mean_count));
+
+    auto c= new TCanvas();
+    cnt_r_h->Draw();
+
+    auto c_norm= new TCanvas();
+    cnt_r_h->DrawNormalized();
+
+    // Print summary
+    cout << "Moments of Distribution:\n"
+         << " - Mean     = " << cnt_r_h->GetMean() << " +- "
+                             << cnt_r_h->GetMeanError() << "\n"
+         << " - Std Dev  = " << cnt_r_h->GetStdDev() << " +- "
+                             << cnt_r_h->GetStdDevError() << "\n"
+         << " - Skewness = " << cnt_r_h->GetSkewness() << "\n"
+         << " - Kurtosis = " << cnt_r_h->GetKurtosis() << "\n";
+}
+```
+## Using graphs
+
+
 
 The advantage of such scripts is the simple interaction with C++ libraries (such as ROOT) and running your code at C++ speed with the convenience of a script.
 
@@ -66,11 +130,6 @@ Now, let's compile and run the script again. Note the `+` after the script name!
 ```bash
 $ root myScript.C+
 
-root [0]
-Processing myScript.C+...
-Info in <TUnixSystem::ACLiC>: creating shared library /path/to/myScript_C.so
-TreeS : 6000
-TreeB : 6000
 ```
 
 ACLiC has many more features, for example compiling your program with debug symbols using `+g`. You can find the documentation [here](https://root.cern/manual/first_steps_with_root/#compiling-a-root-macro-with-aclic).
