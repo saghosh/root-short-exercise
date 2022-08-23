@@ -1,13 +1,12 @@
 ---
-title: "ROOT in C++ and Python"
+title: "ROOT and using ROOT prompt"
 teaching: 10
 exercises: 5
 questions:
-- "Should I use ROOT in C++ or Python?"
+- "How to use a ROOT file and the ROOT prompt ?"
 objectives:
-- "Run C++ code interactively with ROOT!"
-- "Compile C++ programs using ROOT!"
-- "Use ROOT in Python!"
+- "Open a ROOT file"
+- "Use ROOT prompt"
 keypoints:
 - "The choice of interactive C++, compiled C++ or Python is based on the use case!"
 - "Usage of C++ code, compiled with optimization flags, may save you hours of computing time!"
@@ -38,10 +37,10 @@ If you pass a file as argument to `root`, the file will be opened when entering 
 {: .solution}
 
 ```bash
-$ root https://root.cern/files/tmva_class_example.root
+$ root tmva_class_example.root
 
 root [0]
-Attaching file https://root.cern/files/tmva_class_example.root as _file0...
+Attaching file mva_class_example.root as _file0...
 (TFile *) 0x555f82beca10
 
 root [1] _file0->ls() // Show content of the file, all objects are accessible via the prompt!
