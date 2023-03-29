@@ -174,6 +174,45 @@ int main(){
 
 ```
 
+### Examples of creating a ROOT file:
+
+```cpp
+void myScript_file() {
+
+    TH1F *h_var1 = new TH1F("h_var1", "var1", 100, -4.0, 4.0);
+    TFile *file = new TFile("tmva_class_example.root");
+    TTree *tree1 = (TTree*)file->Get("TreeS");
+
+    float varx;
+
+    tree1->SetBranchAddress("var1", &varx);
+
+    TFile* newFile( TFile::Open("newfile.root", "RECREATE") );
+    auto newtree = std::make_unique<TTree>("newtree", "The Tree Title");
+    newtree->Branch("branch0", &varx);
+
+    int nentries = (int)tree1->GetEntries();
+
+    for(int i=0; i < nentries; i++){
+
+        tree1->GetEntry(i);
+        h_var1->Fill(varx);
+        newtree->Fill();
+
+    }
+
+    TCanvas *c1 = new TCanvas();
+    h_var1->Draw();
+
+    newFile->cd();
+    newtree->Write();
+    h_var1->Write();
+
+    newFile->Write();
+    newFile->Close();
+}
+```
+
 The advantage of such scripts is the simple interaction with C++ libraries (such as ROOT) and running your code at C++ speed with the convenience of a script.
 
 ## Compiled C++
