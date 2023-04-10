@@ -5,7 +5,7 @@ questions:
 ---
 ### Read and write file with arrays as branches and calculating invariant mass
 
-The following script should help you understand how to read and write a file with arrays as branches, and some hints on calculating invariant mass of a particle that decays to two objects which are reconstructed
+The following script should help you understand how to read and write a file with arrays as branches, and some hints on calculating invariant mass of a particle that decays to two objects which are reconstructed. Do read the comments embedded within the code.
 
 ```C++
 void myScript() {
