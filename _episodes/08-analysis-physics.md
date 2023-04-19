@@ -42,15 +42,40 @@ When running Delphes without parameters or when supplying an invalid command lin
  with no input_file, or when input_file is -, read standard input.
  ```
  
-Running Delphes with HepMC input files:
+Running Delphes with HepMC input files (example):
 
 ```bash
 ./DelphesHepMC3 cards/delphes_card_CMS.tcl output.root input.hepmc
  ```
  
- Try using 
+ Try using with the file ttbar.lhe shared with you.
 ```bash
-./DelphesHepMC3 cards/delphes_card_CMS.tcl delphes_output.root ttbar.lhe
+./DelphesLHEF cards/delphes_card_CMS.tcl delphes_output.root ttbar.lhe
+```
+
+## DELPHES produced output ROOT file 
+
+To understand the content of the ROOT file produced, a handy reference is available at the Delphes webpage linked [here](https://cp3.irmp.ucl.ac.be/projects/delphes/wiki/WorkBook/RootTreeDescription).
+
+To open the file with ROOT, you need to first load the Delphes library with which the contents of the file can be read:
+```bash
+$ root 
+root[0] gSystem->Load("libDelphes");
+```
+Then you can open the Delhes output ROOT file as:
+```bash
+$ root 
+root[0] gSystem->Load("libDelphes");
+root[1] TFile *_file0 = TFile::Open("delphes_output.root")
+root[3] TBrowser browser
+```
+
+## Visualising DELPHES Detector Simulation
+
+Delphes also allows to viualise event by event detector simulation. Try it out:
+```bash
+$ make display
+$ root -l examples/EventDisplay.C'("cards/delphes_card_CMS.tcl","delphes_output.root")'
 ```
 
 
