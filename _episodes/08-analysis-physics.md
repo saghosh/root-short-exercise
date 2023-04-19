@@ -17,7 +17,7 @@ The publication detailing DELPHES can be found at [JHEP 02 (2014) 057](http://dx
 
 To successfully install Delphes the following prerequisite packages should be installed: [ROOT](https://saghosh.github.io/root-short-exercise/02-get-root/index.html) and [Tcl scripting language](http://www.tcl.tk/).
 
-Download and build Delphes:
+Download and build Delphes after sourcing ROOT:
 
 ```bash
 $ wget http://cp3.irmp.ucl.ac.be/downloads/Delphes-3.5.0.tar.gz
@@ -25,3 +25,33 @@ $ tar -zxf Delphes-3.5.0.tar.gz
 $ cd Delphes-3.5.0
 $ make
 ```
+## Running DELPHES 
+
+Running Delphes can be done through the executables in the directory while passing arguments and paramteres. Eg.:
+```bash
+./DelphesHepMC3
+```
+But with parameters.
+When running Delphes without parameters or when supplying an invalid command line, the following message will be shown:
+
+```bash
+ Usage: DelphesHepMC3 config_file output_file [input_file(s)]
+ config_file - configuration file in Tcl format,
+ output_file - output file in ROOT format,
+ input_file(s) - input file(s) in HepMC format,
+ with no input_file, or when input_file is -, read standard input.
+ ```
+ 
+Running Delphes with HepMC input files:
+
+```bash
+./DelphesHepMC3 cards/delphes_card_CMS.tcl output.root input.hepmc
+ ```
+ 
+ Try using 
+```bash
+./DelphesHepMC3 cards/delphes_card_CMS.tcl delphes_output.root ttbar.lhe
+```
+
+
+
