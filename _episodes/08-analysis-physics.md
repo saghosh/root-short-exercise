@@ -79,4 +79,22 @@ $ root -l examples/EventDisplay.C'("cards/delphes_card_CMS.tcl","delphes_output.
 ```
 
 
+## Running DELPHES directly with PYTHIA8
 
+For this, you need a working PYTHIA8 installation (assuming you have that from the first part of the course).
+
+Define an environment variable for the path to your PYTHIA installation directory:
+```bash
+$ export PYTHIA8=path_to_PYTHIA8_installation 
+$ echo $PYTHIA8
+```
+
+Then, in your DELPHES directory, build the "DelphesPythia8" executable with the following command:
+```bash
+$ make HAS_PYTHIA8=true
+```
+
+Now, you can run a simple example for generating Pythia8 events within Delphes:
+```bash
+$ ./DelphesPythia8 cards/delphes_card_CMS.tcl examples/Pythia8/configNoLHE.cmnd delphes_pythia8.root
+```
