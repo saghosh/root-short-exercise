@@ -3,8 +3,7 @@ title: "Get ROOT"
 questions:
 - "How to install ROOT on my system or get access to systems with ROOT pre-installed?"
 objectives:
-- "Find the most efficient way for you to get access to ROOT"
-- "Install ROOT or connect to a machine with ROOT already installed"
+- "Install ROOT"
 keypoints:
 - "ROOT is accessible in several different ways"
 - "Detailed up-to-date instructions can be found at [https://root.cern/install](https://root.cern/install)"
