@@ -1,7 +1,5 @@
 ---
 title: "How to get help with ROOT?"
-teaching: 10
-exercises: 0
 questions:
 - "Where can I find documentation?"
 - "Where can I ask for help?"
