@@ -3,6 +3,10 @@ title: "Get DELPHES"
 questions:
 - "What is DELPHES ?"
 - "How to install  DELPHES ?"
+objectives:
+- "Install DELPHES"
+keypoints:
+- "The official webpage for DELPHES can be found [here](https://cp3.irmp.ucl.ac.be/projects/delphes)"
 ---
 
 ## DELPHES
