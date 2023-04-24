@@ -5,7 +5,8 @@ questions:
 objectives:
 - "Learn about using C++ scripts with ROOT"
 keypoints:
-- "ROOT provides many features from histogramming, fitting and plotting to investigating data interactively in C++ and Python but scrpts can help with advanced work"
+- "ROOT provides many features from histogramming, fitting and plotting to investigating data interactively in C++ and Python but scripts can help with advanced work"
+- "Learn about C/C++ scripts for ROOT."
 ---
 
 > This section is dedicated to the introduction to using ROOT scripts or macros.
