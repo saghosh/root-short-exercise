@@ -1,7 +1,5 @@
 ---
 title: "ROOT scripts"
-teaching: 20
-exercises: 15
 questions:
 - "How to use ROOT scripts?"
 objectives:
