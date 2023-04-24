@@ -2,6 +2,11 @@
 title: "DELPHES with Scripts"
 questions:
 - "How to analyse DELPHES output files with scripts for ROOT?"
+objectives:
+- "Learning about using DELPHES with C and Python scripts"
+keypoints:
+- "Learning about using DELPHES with C and Python scripts"
+- "More complex Python code can be written based on a separate analysis package, deteailed at [DelphesAnalysis](https://cp3.irmp.ucl.ac.be/projects/delphes/wiki/WorkBook/DelphesAnalysis)."
 ---
 
 ## DELPHES with basic scripts
