@@ -1,7 +1,5 @@
 ---
 title: "Get ROOT"
-teaching: 10
-exercises: 5
 questions:
 - "How to install ROOT on my system or get access to systems with ROOT pre-installed?"
 objectives:
