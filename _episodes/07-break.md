@@ -2,6 +2,10 @@
 title: "Assignment 1 Hints"
 questions:
 - "How to complete Assignment 1  ?"
+objectives:
+- "Complete Assignment 1"
+keypoints:
+- "Some help with Assignment 1"
 ---
 ### Read and write file with arrays as branches and calculating invariant mass
 
