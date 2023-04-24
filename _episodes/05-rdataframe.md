@@ -1,7 +1,5 @@
 ---
 title: "Using ROOT with Python"
-teaching: 10
-exercises: 15
 questions:
 - "How can I use ROOT with Python?"
 objectives:
