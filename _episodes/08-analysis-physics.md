@@ -1,6 +1,7 @@
 ---
 title: "Get DELPHES"
 questions:
+- "What is DELPHES ?"
 - "How to install  DELPHES ?"
 ---
 
