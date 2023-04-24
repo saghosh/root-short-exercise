@@ -3,6 +3,11 @@ title: "Introduction to DELPHES"
 questions:
 - "What is  DELPHES ?"
 - "How to use  DELPHES ?"
+objectives:
+- "Working with DELPHES"
+keypoints:
+- "Understanding basics of using DELPHES."
+- "The publication detailing DELPHES can be found at [JHEP 02 (2014) 057](http://dx.doi.org/10.1007/JHEP02(2014)057) or [arXiv:1307.6346](http://arxiv.org/abs/1307.6346)"
 ---
 
 ## DELPHES
