@@ -6,14 +6,14 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 ![](fig/banner.png)
 
-> ## Welcome to a session on Introduction to ROOT!
-> Hi, here you are about to be introduced to ROOT!
+> ## Welcome to Computational Particle Physics Course
+> Here you are about to be introduced to ROOT and DELPHES, along with a basic introduction to experimental data!
 >
-> This session starts with a few sections providing more general information and an introduction to the very basics with some basics. The second part was based on a CMS specific workshop and is not relevant here.
+> This part of the course is about ROOT, DELPHES and an introduction to experimental data analysis. This webpage contains the material for the lectures covering the hands on tutorials for these topics.
 {: .callout}
 
-> ## How does this work?
-> - Each section provides an overview with the estimated timeline, the questions tackled and the learning objectives. 
+> ## How does this webpage work?
+> - Each section provides an overview with the planned contants of hands on sessions to go along with the theoretical concepts to be covered in the slides during the lectures.. 
 > - Don't hesitate to ask questions, or ask for additional information!
 {: .keypoints}
 
