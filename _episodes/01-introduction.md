@@ -14,7 +14,7 @@ keypoints:
 - "You'll learn how to get help with ROOT!"
 ---
 
-Hi there, a warm welcome to the lesson about efficient analysis with ROOT!
+Introduction to ROOT!
 
 > ## What is ROOT?
 > Most likely some of youyou were already in touch with ROOT! 
