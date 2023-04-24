@@ -1,5 +1,1 @@
----
-title: "Instructor Notes"
----
-
-{% include links.md %}
+Not for this
