@@ -1,21 +1,18 @@
 ---
-title: "Introduction"
+title: "Introduction to ROOT"
 questions:
 - "What is ROOT?"
 - "What can I learn here?"
 objectives:
-- "Understand what you can learn in this lesson!"
+- "Understand what is ROOT!"
 keypoints:
-- "You'll learn how to install ROOT on your system or get access to systems with ROOT pre-installed!"
-- "You'll learn how to use ROOT in C++ and Python!"
-- "You'll learn about commonly used features in ROOT!"
-- "You'll learn how to get help with ROOT!"
+- "Understanding what is ROOT"
 ---
 
 Introduction to ROOT!
 
 > ## What is ROOT?
-> Most likely some of youyou were already in touch with ROOT! 
+> Most likely some of you were already in touch with ROOT! 
 > ROOT is an open-source data analysis framework used by high energy physics and others, which lets you save and access your experiment's data, allows you to process the data in a computationally efficient and statistically sound way and gives you access to all tools to produce publication-quality results.
 > Basically, ROOT allows you to prcess data for physics analyses.
 {: .testimonial}
