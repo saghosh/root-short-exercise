@@ -1,7 +1,5 @@
 ---
 title: "Introduction"
-teaching: 5
-exercises: 0
 questions:
 - "What is ROOT?"
 - "What can I learn here?"
