@@ -1,7 +1,5 @@
 ---
 title: "ROOT and using ROOT prompt"
-teaching: 20
-exercises: 10
 questions:
 - "How to use a ROOT file and the ROOT prompt ?"
 objectives:
